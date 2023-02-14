@@ -4,6 +4,44 @@
     <link rel="stylesheet" href="style.css">
     </head>
     <body>
+        <main> 
+            <article class="wrapper"> 
+                <div class="textHeader">
+                    <h2>Simple Interes Calculator</h2>
+                </div>
+                <div class="formBox">
+                    <form action="#" id="form1">
+                        <label for="principal">Amount</label>
+                        <input type="number" id="principal">
+                        <br/>
+                        <label for="rate">Interest Rate</label>
+                        <input type="range" id="rate" min="1" max="20" step="0.5" > <span id="percentage"></span>
+                        <br>
+                        <label for="years">No. of Years</label>
+                        <select id="years">
+                            <option value="1" default>1</option>  
+                            <option value="2">2</option>  
+                            <option value="5">5</option>  
+                            <option value="10">10</option>  
+                            <option value="15">15</option>  
+                        </select>
+                        <br>
+                        <button type="button">Compute Interest</button>
+                    </form>
+                </div>
+                <div class="textBox">
+                    <p id="Results"> 
+                        If you deposit <span id="amountInsert"></span>, <br>
+                        at an interest rate of <span id="rateInserted"></span>. <br>
+                        You will receive an amount of <span id="result"></span>,<br>
+                        in the year <span id="yearResult"></span>
+                    </p>
+                </div>
+                <footer>
+                     &#169 Everyone Can Get Rich
+                </footer>
+            </article>
+        </main>
         <h1>Simple Interest Calculator</h1>
 
         Amount <input type="number"  id="principal">  <br/>
@@ -11,6 +49,7 @@
         No. of Years <input type="number"  id="years">  <br/>
         Interest : <span id="result"></span><br>
 
-        <button onclick="compute()">Compute</button>
+        <button >Compute</button>
+        <script type="text/javascript" src="script.js"></script>
     </body>
 </html>
