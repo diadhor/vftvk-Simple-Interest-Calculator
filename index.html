@@ -6,7 +6,7 @@
     <body>
         <main> 
             <article class="wrapper"> 
-                <div class="textHeader">
+                <div class="textHeaderBox">
                     <h2>Simple Interes Calculator</h2>
                 </div>
                 <div class="formBox">
@@ -15,7 +15,7 @@
                         <input type="number" id="principal">
                         <br/>
                         <label for="rate">Interest Rate</label>
-                        <input type="range" id="rate" min="1" max="20" step="0.5" value="1" onclick="rateInterest();"> <span id="percentage"></span>
+                        <input type="range" id="rate" min="1" max="20" step="0.1" value="1" onpointermove="rateInterest();"> <span id="percentage"></span>
                         <br>
                         <label for="years">No. of Years</label>
                         <select id="years">
@@ -53,3 +53,4 @@
         <script type="text/javascript" src="script.js"></script>
     </body>
 </html>
+
