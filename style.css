@@ -1,8 +1,33 @@
 body {background-color:tan;}
 h1{color:green;}
 
-input [type="range"]{ 
+input[type="range"] {
+    appearance:none;
+    border: none;
+    border-radius:20px 20px 20px 20px ;
+    height:3px;
+    background-color:purple;
+    margin: 20px;
+}
+/*Google styles*/
+input[type="range"]::-webkit-slider-thumb{
+		-webkit-appereance:none;
+		appearance:none;
+		width:15px;
+		height:15px;
+		background:purple;
+		border-radius:50%;
+		cursor: pointer;
+		box-shadow:0 0 10px purple;		
+}
 
-	border:none;
-	background:red;
+/*Mozilla Styles*/
+input[type="range"]::-moz-range-thumb {
+		appearance:none;
+		width:15px;
+		height:15px;
+		background:red;
+		border-radius:50%;
+		cursor: pointer;
+		box-shadow:0 0 10px purple;	
 }
