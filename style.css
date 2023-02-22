@@ -3,6 +3,7 @@
 	padding:0;
 	box-sizing:border-box;
 	font-family:consolas;
+	font-weight:900;
 }
 main{
 	position:relative;
@@ -35,16 +36,17 @@ main{
 .formBox{
 	position:relative;
 	display:flex;
-	width: 80%;
+	justify-content:center;
+	width: 60%;
 	padding:10px;
 }
 
 .formBox form {
-	width:100%;
+	width:80%;
 }
 .formBox form label {
 	display:inline-block;
-	width:250px;
+	width:150px;
 	letter-spacing:1px;
 	margin-bottom:20px;
 }
@@ -53,7 +55,7 @@ main{
 	height:25px;
 	padding:5px;	
 	margin-bottom:15px;
-	border:none;
+	border:1px solid gray;
 	border-radius: 10px;
 	outline: none;
 
@@ -69,35 +71,38 @@ main{
 }
 
 .formBox form  input[type="range"] {
-    appearance:none;
-    border: none;
+ /*   appearance:none;
+    border: 1px solid gray;
     border-radius:20px 20px 20px 20px ;
-    height:3px;
-    background-color:purple;
- 
+    height:10px;
+    background-color:blue;
+  */
 }
 /*Google styles*/
 .formBox form input[type="range"]::-webkit-slider-thumb{
-		-webkit-appereance:none;
+	/*	-webkit-appereance:none;
 		appearance:none;
-		width:15px;
-		height:15px;
-		background:purple;
+		width:10px;
+		height:10px;
+		background:blue;
 		border-radius:50%;
+		transition:.2s;
 		cursor: pointer;
-		box-shadow:0 0 10px purple;		
+		*/
 }
 
 /*Mozilla Styles*/
 .formBox form input[type="range"]::-moz-range-thumb {
-		appearance:none;
+	/*	appearance:none;
 		width:15px;
 		height:15px;
 		background:red;
 		border-radius:50%;
 		cursor: pointer;
 		box-shadow:0 0 10px purple;	
+		*/
 }
+
 .formBox form button {
 	width:30%;
 	height:30px;
@@ -128,4 +133,15 @@ main{
 	background: gold;
 	letter-spacing: 1px;
 	font-weight: 900;
+}
+footer {
+	position:relative;
+	display:flex;
+	width:80%;
+	padding:10px;
+	justify-content:start;
+	align-content:center;
+}
+footer p {
+	letter-spacing:1px;
 }
