@@ -1,16 +1,83 @@
-body {background-color:tan;}
-h1{color:green;}
+*{
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+	font-family:consolas;
+}
+main{
+	position:relative;
+	display:flex;
+	justify-content:center;
+	align-content:center;
+	width:100%;
+	min-height:100vh;
+	padding:100px;
+	background:black;
+}
+.wrapper{
+	position:relative;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	flex-direction:column;
+	width:80%;
+	height:60%;
+	border-radius:25px;
+	background:floralwhite;
 
-input[type="range"] {
+}
+.textHeaderBox {
+	font-size: 1.5em;
+	color:dimgrey;
+	margin:5px;
+	padding-bottom:20px;
+}
+.formBox{
+	position:relative;
+	display:flex;
+	width: 80%;
+	padding:10px;
+}
+
+.formBox form {
+	width:100%;
+}
+.formBox form label {
+	display:inline-block;
+	width:250px;
+	letter-spacing:1px;
+	margin-bottom:20px;
+}
+.formBox form input, .formBox form select {
+	width:240px;
+	height:25px;
+	padding:5px;	
+	margin-bottom:15px;
+	border:none;
+	border-radius: 10px;
+	outline: none;
+
+} 
+.formBox form input[type="range"]{
+	padding: 0;
+	width:165px;
+	margin-right:20px;
+}
+.formBox form span{
+	text-align: right;
+	letter-spacing:1px;
+}
+
+.formBox form  input[type="range"] {
     appearance:none;
     border: none;
     border-radius:20px 20px 20px 20px ;
     height:3px;
     background-color:purple;
-    margin: 20px;
+ 
 }
 /*Google styles*/
-input[type="range"]::-webkit-slider-thumb{
+.formBox form input[type="range"]::-webkit-slider-thumb{
 		-webkit-appereance:none;
 		appearance:none;
 		width:15px;
@@ -22,7 +89,7 @@ input[type="range"]::-webkit-slider-thumb{
 }
 
 /*Mozilla Styles*/
-input[type="range"]::-moz-range-thumb {
+.formBox form input[type="range"]::-moz-range-thumb {
 		appearance:none;
 		width:15px;
 		height:15px;
@@ -30,4 +97,35 @@ input[type="range"]::-moz-range-thumb {
 		border-radius:50%;
 		cursor: pointer;
 		box-shadow:0 0 10px purple;	
+}
+.formBox form button {
+	width:30%;
+	height:30px;
+	border:none;
+	border-radius:20px;
+	margin:10px 10px 10px 0;
+	padding:0px 10px 0px 10px;
+	letter-spacing: 1px;
+	align-self: auto;
+	outline:none;
+}
+.formBox form button:hover{
+	background:darkkhaki;
+}
+.textBox {
+	position:relative;
+	display:hidden;
+	width:80%;
+	justify-content:center;
+	align-content:center;
+	padding:20px;
+}
+.textBox p{
+	letter-spacing: 1px;
+}
+.textBox p span {
+	color:black;
+	background: gold;
+	letter-spacing: 1px;
+	font-weight: 900;
 }
