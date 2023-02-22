@@ -1,23 +1,22 @@
 <html>
     <head>
-    <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <main> 
             <article class="wrapper"> 
                 <div class="textHeaderBox">
-                    <h2>Simple Interes Calculator</h2>
+                    <h2>Simple Interest Calculator</h2>
                 </div>
                 <div class="formBox">
                     <form action="#" id="form1">
-                        <label for="principal">Amount</label>
-                        <input type="number" id="principal" value="15">
+                        <label for="principal">Amount: </label>
+                        <input type="number" id="principal" >
                         <br/>
-                        <label for="rate">Interest Rate</label>
-                        <input type="range" id="rate" min="1" max="20" step="0.1" value="1"> <span id="percentage"></span>
+                        <label for="rate">Interest Rate: </label>
+                        <input type="range" id="rate" min="0.01" max="100" step="0.01" value="0.01" ><span id="percentage"></span>
                         <br>
-                        <label for="years">No. of Years</label>
+                        <label for="years">No. of Years: </label>
                         <select id="years">
                             <option value="1" selected>1</option>  
                             <option value="2">2</option>  
@@ -25,14 +24,15 @@
                             <option value="10">10</option>  
                             <option value="15">15</option>  
                         </select>
+                        <i></i>
                         <br>
-                        <button type="button">Compute Interest</button>
+                        <button type="button" id="btnCompute">Compute Interest</button>
                     </form>
                 </div>
-                <div class="textBox">
-                    <p id="Results"> 
+                <div class="textBox" hidden>
+                    <p> 
                         If you deposit <span id="amountInsert"></span>, <br>
-                        at an interest rate of <span id="rateInserted"></span>. <br>
+                        at an interest rate of <span id="rateInserted"></span>%. <br>
                         You will receive an amount of <span id="result"></span>,<br>
                         in the year <span id="yearResult"></span>
                     </p>
@@ -42,16 +42,6 @@
                 </footer>
             </article>
         </main>
-    <!--
-        <h1>Simple Interest Calculator</h1>
-
-        Amount <input type="number"  id="principal">  <br/>
-        Rate <input type="number"  id="rate">  <br/>
-        No. of Years <input type="number"  id="years">  <br/>
-        Interest : <span id="result"></span><br>
-
-        <button >Compute</button>
-    -->
         <script type="text/javascript" src="script.js"></script>
     </body>
 </html>
