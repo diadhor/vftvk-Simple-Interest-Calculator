@@ -20,6 +20,7 @@ function validations() {
 		setTimeout(()=>{
 			alert('Enter a positive number');
 			amountValue.value='';
+			amountValue.focus();
         	resultDiv.hidden=true;
         	return
 		}, 500)
@@ -38,9 +39,10 @@ function rateInterest() {
 }
 
 function computeInterest() {
-	let rate=parseFloat(rateValue.value), amount=parseFloat(amountValue.value), year=parseInt(yearValue.value);
-	c(`${rate} ${amount} ${year}`);
-	return rate*amount*year;
+	let rate=parseFloat(rateValue.value), amount=parseFloat(amountValue.value), year=parseInt(yearValue.value), interest=0;
+	interest=(rate*amount)/100;
+	//c(`${interest} ${rate} ${amount} ${year}`);
+	return interest*year;
 }
 
 function setResult() {
